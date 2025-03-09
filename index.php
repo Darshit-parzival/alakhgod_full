@@ -17,7 +17,6 @@
                 </div>
             </div>
 
-            <!-- Right Section (Two Images) -->
             <div class="col-lg-5 col-md-4 col-sm-12 text-center d-flex flex-column align-items-center">
                 <!-- Images -->
                 <img src="assets/img/1-1.png" alt="Right Image 1" class="img-fluid right-image">
