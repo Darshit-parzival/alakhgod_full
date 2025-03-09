@@ -1,3 +1,8 @@
+:root {
+    --font-color-heading-index:#b300aa;
+    --font-color-index:#a8006d;
+}
+
 .god-link-home{
     color: black !important;
     text-decoration: none !important;
@@ -50,3 +55,100 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
 }
 
+.foot-font{
+    color: #d81376;
+}
+
+.index-bg {
+    background-image: url('../img/God_Website_background_Lighte.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.god-image {
+    width: 667px !important;
+    height: auto !important;
+}
+
+.index-heading {
+    color: var(--font-color-heading-index) !important;
+}
+
+.index-font {
+    color: var(--font-color-index) !important;
+}
+.text-content {
+    max-width: 1000px; /* Adjust this value as needed */
+    text-align: center;
+}
+h4 {
+    font-weight: normal;
+    color: var(--font-color-index);
+}
+.section-heading {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--font-color-index);
+}
+
+.d-flex.flex-wrap {
+    gap: 20px; /* Space between boxes */
+}
+
+.info-box {
+    flex: 1;
+    min-width: 300px; /* Ensures responsiveness */
+    max-width: 350px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: var(--font-color-index);
+}
+
+.info-box h4 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.info-box p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: var(--font-color-index);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #d14bd8;
+}
+
+/* Ensures left-aligned text */
+.text-left {
+    text-align: left;
+}
+
+/* Right section images styling */
+/* Right section images styling */
+.right-image {
+    width: 300px; /* Set fixed width */
+    display: block; /* Forces image to appear on a new line */
+    margin: 0 auto 15px auto; /* Centers image and adds spacing */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
