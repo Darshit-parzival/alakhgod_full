@@ -1,4 +1,4 @@
-<?php include('header.php'); ?>
+<?php include('includes/header.php'); ?>
 
 <div class="index-bg d-flex flex-column">
     <div class="container flex-grow-1 d-flex flex-column justify-content-start align-items-center mt-5">
@@ -78,4 +78,4 @@
         </div>
     </div>
 
-    <?php include('footer.php'); ?>
+    <?php include('includes/footer.php'); ?>

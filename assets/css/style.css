@@ -40,6 +40,17 @@
     border-radius: 2px;
 }
 
+.navbar-toggler {
+    z-index: 1;
+    left: 15px;
+}
+
+@media (max-width: 991px) {
+    .mobile-header {
+        padding: 0.5rem 0;
+    }
+}
+
 .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0;
