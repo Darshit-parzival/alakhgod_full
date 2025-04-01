@@ -1,0 +1,459 @@
+:root {
+    --font-color-heading-index:#b300aa;
+    --font-color-index:#a8006d;
+}
+
+html, body {
+    overflow-x: hidden;  
+    width: 100%;
+    margin: 0;   
+    padding: 0;  
+    box-sizing: border-box;  
+}
+
+.god-link-home{
+    color: black !important;
+    text-decoration: none !important;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.god-link-home:hover{
+    color: #d14bd8 !important;
+    text-decoration: none !important;
+    transition: 0.2s ease-in-out !important;
+}
+.navbar-nav .nav-link {
+    color: #d81376 !important;
+    position: relative;
+        overflow: hidden;
+    position: relative;
+}
+
+.navbar-nav .nav-link.active {
+    text-decoration: none;
+    color: #d14bd8 !important;
+}
+
+.nav-link:hover {
+    color: #d14bd8 !important;
+}
+
+.navbar-nav .nav-link.active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px; 
+    background-color: #d14bd8;
+    margin-top: 3px;
+    border-radius: 2px;
+}
+
+.nav-item {
+    margin: 0 8px; /* Adjusts spacing between items */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+.dropdown-menu {
+    margin-top: 0;
+    border-radius: 0 !important;
+    border-top: 2px solid #d14bd8 !important; /* Applying color only to the top border */
+    border-left: 2px solid #fff !important;
+    border-right: 2px solid #fff !important;
+    border-bottom: 2px solid #fff !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+.foot-font{
+    color: #d81376;
+}
+
+.index-bg {
+    background-image: url('../img/God_Website_background_Lighte.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.god-image {
+    width: 667px !important;
+    height: auto !important;
+}
+
+.index-heading {
+    color: var(--font-color-heading-index) !important;
+}
+
+.index-font {
+    color: var(--font-color-index) !important;
+}
+.text-content {
+    max-width: 1000px; /* Adjust this value as needed */
+    text-align: center;
+}
+h4 {
+    font-weight: normal;
+    color: var(--font-color-index);
+}
+.section-heading {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--font-color-index);
+}
+
+.d-flex.flex-wrap {
+    gap: 20px; /* Space between boxes */
+}
+
+.info-box {
+    flex: 1;
+    min-width: 300px; /* Ensures responsiveness */
+    max-width: 350px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: var(--font-color-index);
+}
+
+.info-box h4 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.info-box p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: var(--font-color-index) !important;
+    border: none !important;
+    padding: 8px 16px !important;
+    border-radius: 5px !important;
+    text-decoration: none !important;
+    color: white !important;
+    font-weight: bold !important;
+}
+
+.btn-primary:hover {
+    background-color: #d14bd8 !important;
+}
+
+/* Ensures left-aligned text */
+.text-left {
+    text-align: left;
+}
+
+/* Right section images styling */
+/* Right section images styling */
+.right-image {
+    width: 300px; /* Set fixed width */
+    display: block; /* Forces image to appear on a new line */
+    margin: 0 auto 15px auto; /* Centers image and adds spacing */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    background: #fdf7fb; /* Light pinkish background */
+    text-align: center;
+}
+.header-container h1 {
+    color: #a10c5e; 
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+.breadcrumb-container {
+    background: #fdf7fb;
+    padding: 10px 20px;
+    text-align: right;
+}
+.breadcrumb a {
+    color: #a10c5e;
+    text-decoration: none;
+}
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .responsive-container {
+        flex-direction: column;   /* Stack items vertically */
+        text-align: left;       /* Center the breadcrumb */
+    }
+    .breadcrumb-container {
+        text-align: left;       /* Center breadcrumb on smaller screens */
+    }
+}
+
+#scrollBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #abb8c3; /* Grey color */
+    color: white;
+    cursor: pointer;
+    width: 30px;  /* Equal width and height */
+    height: 30px; /* Ensures a perfect circle */
+    border-radius: 50%; /* Makes it circular */
+    font-size: 10px;
+    transition: background 0.5s, transform 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers the icon/text */
+}
+
+#scrollBtn:hover {
+    background-color: var(--font-color-heading-index); /* Darker grey */
+    transform: scale(1.1);
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #0056b3;
+}
+
+.social-icons a img {
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
+
+form .form-control {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: box-shadow 0.3s, border 0.3s;
+}
+
+form .form-control:focus {
+    box-shadow: 0 0 8px #007bff;
+    border: 1px solid #007bff;
+}
+
+form button {
+    transition: background 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+.accordion-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.accordion-item:hover {
+    transform: scale(1.02);
+}
+
+.accordion-button {
+    background-color: #f8f9fa;
+    color: #333;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.accordion-body {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.accordion-body a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.accordion-body a:hover {
+    color: #0056b3;
+}
+
+footer {
+    background: #f8f9fa;
+    color: #495057;
+    font-size: 15px;
+}
+
+footer h5 {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+footer a {
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+footer .bi {
+    color: var(--font-color-index);
+    transition: color 0.3s, transform 0.3s;
+}
+
+footer .bi:hover {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+footer .border-top {
+    border-color: #ddd !important;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    background: #444;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.tabs button {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    background: #444;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.tabs button:hover, .tabs button.active {
+    background: #6c757d;
+}
+.section {
+    display: none;
+    background: #fff;
+    padding: 40px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.section.active {
+    display: block;
+}
+.section h2 {
+    color: #6f42c1;
+    font-size: 28px;
+}
+.section p {
+    color: #555;
+    font-size: 18px;
+}
+.section img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+.btn-custom {
+    background: #d63384;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    transition: 0.3s;
+}
+.btn-custom:hover {
+    background: #b02a70;
+}
+
+.cart-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px #ccc;
+    padding: 15px;
+    width: 300px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+.cart-container ul {
+    list-style: none;
+    padding: 0;
+}
+.cart-container ul li {
+    margin: 5px 0;
+}
+
+.ebook-container {
+    max-width: 1100px;
+    margin: 50px auto;
+    background: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.ebook-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.ebook-right {
+    padding: 40px;
+    background: #fff;
+}
+.ebook-title {
+    color: #6a0dad;
+    font-weight: bold;
+}
+.ebook-btn {
+    background-color: #ff00ff;
+    color: white;
+    border: none;
+}
+.ebook-btn:hover {
+    background-color: #d400d4;
+}
+.forgot-link {
+    color: #007BFF;
+    text-decoration: none;
+}
+.forgot-link:hover {
+    text-decoration: underline;
+}
