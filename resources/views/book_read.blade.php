@@ -1,15 +1,16 @@
 @extends('layouts.main')
 
 @section('main-section')
-    <div class="container flex-grow-1 d-flex flex-column justify-content-start align-items-left mt-5">
+    <div class="container flex-grow-1 d-flex flex-column justify-content-start align-items-left">
         <div class="row justify-content-center">
             <!-- Left Section (Main Content) -->
+            <h2 class="text-left" style="color: darkmagenta">Read "Message From God" eBook</h2>
             <div class="col-lg-7 col-md-8 col-sm-12 text-left">
                 <div class="container ebook-container">
                     <div class="row">
                         <!-- Left Side (Image) -->
                         <div class="col-md-5 ebook-left">
-                            <img src="image.png" alt="Book Cover">
+                            <img src="{{ asset('assets/img/Cover_Front_english.jpg') }}" alt="Book Cover">
                         </div>
 
                         <!-- Right Side (Content) -->
@@ -31,8 +32,21 @@
                                         placeholder="Enter your password" required>
                                 </div>
 
+                                <div class="mb-3">
+                                    <label class="form-label">Select Language:</label>
+                                    <div>
+                                        <input type="radio" id="english" name="language" value="english" required>
+                                        <label for="english">English</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="hindi" name="language" value="hindi">
+                                        <label for="hindi">Hindi</label>
+                                    </div>
+                                </div>
+
                                 <button type="submit" class="btn ebook-btn w-100">Login to Read eBook</button>
                             </form>
+
 
                             <div class="text-end mt-3">
                                 <a href="#" class="forgot-link">Forgot Password?</a>

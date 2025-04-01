@@ -597,9 +597,27 @@ footer .border-top {
     }
 }
 
+.cart-category {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+}
+
+.cart-category h6 {
+    color: darkmagenta;
+    margin-bottom: 1rem;
+}
+
+.subtotal {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    padding-right: 1rem;
+}
+
 .ebook-container {
     max-width: 1100px;
-    margin: 50px auto;
+    /* margin: 50px auto; */
     background: white;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;

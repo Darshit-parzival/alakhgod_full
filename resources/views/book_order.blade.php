@@ -1,9 +1,9 @@
 @extends('layouts.main')
 
 @section('main-section')
-<button class="cart-toggle-btn" onclick="toggleCart()">
-    🛒 <span id="mobileCartCount">0</span>
-</button>
+    <button class="cart-toggle-btn" onclick="toggleCart()">
+        🛒 <span id="mobileCartCount">0</span>
+    </button>
     <div id="cartContainer" class="cart-container">
         <div class="cart-header">
             <h5>Shopping Cart (<span id="cartCount">0</span>)</h5>

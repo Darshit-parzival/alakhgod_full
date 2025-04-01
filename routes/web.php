@@ -54,3 +54,7 @@ Route::get('/Others/FAQ', function () {
 
 // Catch-all route for 404 pages (should be placed last)
 Route::fallback([ErrController::class, 'notFound']);
+
+Route::get('/admin', function () {
+    return view('admin.index');
+});
