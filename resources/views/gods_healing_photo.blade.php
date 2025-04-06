@@ -48,10 +48,11 @@
 
                     <!-- Video Section -->
                     <div class="container text-center mb-4">
-                        <video controls width="100%"
-                            style="max-width: 800px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                            <source src="path/to/your-video.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
+                        <video style="max-width: 800px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"
+                            id="healing-photo" playsinline controls>
+                            <source
+                                src="{{ asset('assets/vid/healing_photo/Inviting_Humans_To_Use_Gods_Healing_Cards.mp4') }}"
+                                type="video/mp4" />
                         </video>
                     </div>
 
@@ -60,19 +61,28 @@
                             <table class="table table-bordered text-center" style="border-color: #d14bd8;">
                                 <tbody>
                                     <tr style="background: #ffffff;">
-                                        <td class="p-3" style="color: #d14bd8; font-weight: bold;">English</td>
-                                        <td class="p-3" style="color: #d14bd8; font-weight: bold;">Hindi (हिंदी)</td>
-                                        <td class="p-3" style="color: #d14bd8; font-weight: bold;">Gujarati (ગુજરાતી)</td>
+                                        <td class="p-3" style="color: #d14bd8; font-weight: bold;"><a
+                                                href="#english-card">English</a></td>
+                                        <td class="p-3" style="color: #d14bd8; font-weight: bold;"><a
+                                                href="#hindi-card">Hindi (हिंदी)</td>
+                                        <td class="p-3" style="color: #d14bd8; font-weight: bold;"><a
+                                                href="#gujarati-card">Gujarati (ગુજરાતી)</a></td>
                                     </tr>
                                     <tr style="background: #f1f1f1;">
-                                        <td class="p-3" style="color: #d14bd8; font-weight: bold;">Marathi (मराठी)</td>
-                                        <td class="p-3" style="color: #d14bd8; font-weight: bold;">Kannada (ಕನ್ನಡ)</td>
-                                        <td class="p-3" style="color: #d14bd8; font-weight: bold;">Tamil (தமிழ்)</td>
+                                        <td class="p-3" style="color: #d14bd8; font-weight: bold;"><a
+                                                href="marathi-card">Marathi (मराठी)</a></td>
+                                        <td class="p-3" style="color: #d14bd8; font-weight: bold;"><a
+                                                href="kannada-card">Kannada (ಕನ್ನಡ)</a></td>
+                                        <td class="p-3" style="color: #d14bd8; font-weight: bold;"><a
+                                                href="tamil-card">Tamil (தமிழ்)</a></td>
                                     </tr>
                                     <tr style="background: #ffffff;">
-                                        <td class="p-3" style="color: #d14bd8; font-weight: bold;">Telugu (తెలుగు)</td>
-                                        <td class="p-3" style="color: #d14bd8; font-weight: bold;">Malayalam (മലയാളം)</td>
-                                        <td class="p-3" style="color: #d14bd8; font-weight: bold;">Bengali (বাংলা)</td>
+                                        <td class="p-3" style="color: #d14bd8; font-weight: bold;"><a
+                                                href="telugu-card">Telugu (తెలుగు)</a></td>
+                                        <td class="p-3" style="color: #d14bd8; font-weight: bold;"><a
+                                                href="malayalam-card">Malayalam (മലയാളം)</a></td>
+                                        <td class="p-3" style="color: #d14bd8; font-weight: bold;"><a
+                                                href="marathi-card">Bengali (বাংলা)</a></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -96,7 +106,7 @@
                         </ul>
                     </div>
                     <!-- English Card Section -->
-                    <div class="container mt-5">
+                    <div class="container mt-5" id="english-card">
                         <!-- Centered Heading -->
                         <h3 class="index-font text-center" style="color: #d14bd8; font-weight: bold;">English Card</h3>
 
@@ -122,7 +132,7 @@
                     </div>
 
                     <!-- Hindi Cards (हिंदी कार्ड)  -->
-                    <div class="container mt-5">
+                    <div class="container mt-5" id="hindi-card">
                         <!-- Centered Heading -->
                         <h3 class="index-font text-center" style="color: #d14bd8; font-weight: bold;">Hindi Cards (हिंदी
                             कार्ड)</h3>
@@ -149,7 +159,7 @@
                     </div>
 
                     <!-- Gujarati Cards (ગુજરાતી કાર્ડ)  -->
-                    <div class="container mt-5">
+                    <div class="container mt-5" id="gujarati-card">
                         <!-- Centered Heading -->
                         <h3 class="index-font text-center" style="color: #d14bd8; font-weight: bold;">Gujarati Cards
                             (ગુજરાતી કાર્ડ)</h3>
@@ -176,7 +186,7 @@
                     </div>
 
                     <!-- Marathi Cards (मराठी कार्ड)  -->
-                    <div class="container mt-5">
+                    <div class="container mt-5" id="marathi-card">
                         <!-- Centered Heading -->
                         <h3 class="index-font text-center" style="color: #d14bd8; font-weight: bold;">Marathi Cards (मराठी
                             कार्ड)</h3>
@@ -203,7 +213,7 @@
                     </div>
 
                     <!-- Kannada Cards (ಕನ್ನಡ ಕಾರ್ಡ್‌ಗಳು)  -->
-                    <div class="container mt-5">
+                    <div class="container mt-5" id="kannada-card">
                         <!-- Centered Heading -->
                         <h3 class="index-font text-center" style="color: #d14bd8; font-weight: bold;">Kannada Cards (ಕನ್ನಡ
                             ಕಾರ್ಡ್‌ಗಳು)</h3>
@@ -230,7 +240,7 @@
                     </div>
 
                     <!-- Tamil Cards (தமிழ் அட்டைகள்)  -->
-                    <div class="container mt-5">
+                    <div class="container mt-5" id="tamil-card">
                         <!-- Centered Heading -->
                         <h3 class="index-font text-center" style="color: #d14bd8; font-weight: bold;">Tamil Cards (தமிழ்
                             அட்டைகள்)</h3>
@@ -257,7 +267,7 @@
                     </div>
 
                     <!-- Telugu Cards (తెలుగు కార్డులు)  -->
-                    <div class="container mt-5">
+                    <div class="container mt-5" id="telugu-card">
                         <!-- Centered Heading -->
                         <h3 class="index-font text-center" style="color: #d14bd8; font-weight: bold;">Telugu Cards (తెలుగు
                             కార్డులు)</h3>
@@ -284,7 +294,7 @@
                     </div>
 
                     <!-- Malayalam Cards (മലയാളം കാർഡുകൾ)  -->
-                    <div class="container mt-5">
+                    <div class="container mt-5" id="malayalam-card">
                         <!-- Centered Heading -->
                         <h3 class="index-font text-center" style="color: #d14bd8; font-weight: bold;">Malayalam Cards
                             (മലയാളം കാർഡുകൾ)</h3>
@@ -311,7 +321,7 @@
                     </div>
 
                     <!-- Bengali Cards (বাঙালি কার্ড)  -->
-                    <div class="container mt-5">
+                    <div class="container mt-5" id="bengali-card">
                         <!-- Centered Heading -->
                         <h3 class="index-font text-center" style="color: #d14bd8; font-weight: bold;">Bengali Cards (বাঙালি
                             কার্ড)</h3>
@@ -346,5 +356,28 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const player = new Plyr('#healing-photo', {
+            controls: [
+                'play', 'progress', 'duration', 'mute', 'volume',
+                'fullscreen'
+            ],
+            autoplay: false,
+            keyboard: { focused: true, global: true },
+            seekTime: 5
+        });
+
+        // Remove the 'canplay' duration override (caused seeking issues)
+        // Remove the 'seeking' event handler (unnecessary interference)
+
+        // Security measures (keep these)
+        document.getElementById('healing-photo').addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('keydown', event => {
+            if (event.ctrlKey && ['s', 'S', 'u', 'U', 'p', 'P'].includes(event.key)) {
+                event.preventDefault();
+            }
+        });
+    </script>
 
 @endsection

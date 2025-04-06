@@ -13,23 +13,29 @@
                         <h4 class="mt-5 index-font">You are welcome to the space of Goddess and God.</h4>
 
                         <p class="mt-4 index-font">
-                            The Face of the humans you see above are the ones that I, God, am currently using to reach the Humans. I came to your universe to free my Children, the Souls. Now, that job is done.
+                            The Face of the humans you see above are the ones that I, God, am currently using to reach the
+                            Humans. I came to your universe to free my Children, the Souls. Now, that job is done.
                         </p>
 
                         <p class="mt-4 index-font">
-                            What you have known are the deities (angels), Soul and king of this universe who created multiple deceptions in the name of God, to ensure that you won’t hear My Message.
+                            What you have known are the deities (angels), Soul and king of this universe who created
+                            multiple deceptions in the name of God, to ensure that you won’t hear My Message.
                         </p>
 
                         <p class="mt-4 index-font">
-                            I, God, Am not the God of any Religion or Spirituality. I never created them. I have nothing to do with them.
+                            I, God, Am not the God of any Religion or Spirituality. I never created them. I have nothing to
+                            do with them.
                         </p>
 
                         <p class="mt-4 index-font">
-                            I, God, Am wanting the humans to choose Me, share with Me their pain & suffering for 30 days, and experience My Grace.
+                            I, God, Am wanting the humans to choose Me, share with Me their pain & suffering for 30 days,
+                            and experience My Grace.
                         </p>
 
                         <p class="mt-4 index-font">
-                            This website is an Invitation for you to get to Know Me and see what shows up in your life when you try the tools given by Me, God. Then make a <b> Choice if you wish to Connect with Me</b> or remain with what you are already connected with.
+                            This website is an Invitation for you to get to Know Me and see what shows up in your life when
+                            you try the tools given by Me, God. Then make a <b> Choice if you wish to Connect with Me</b> or
+                            remain with what you are already connected with.
                         </p>
                     </div>
 
@@ -46,22 +52,28 @@
                         <!-- Subcontent 1 -->
                         <div class="info-box">
                             <h4>My Book</h4>
-                            <p>Until August 2023, you had to attend a 3-day workshop by My Messenger, Pradip Mukherji, to get to know Me. Today, you can know Me through My Book.</p>
+                            <p>Until August 2023, you had to attend a 3-day workshop by My Messenger, Pradip Mukherji, to
+                                get to know Me. Today, you can know Me through My Book.</p>
                             <a href="book/about/gods_book.php" class="btn btn-primary">Click Here to Know About My Book</a>
                         </div>
 
                         <!-- Subcontent 2 -->
                         <div class="info-box">
                             <h4>My Mantra</h4>
-                            <p>My Mantra takes less than 2 mins a day to do. It is always given for FREE. While I will not give you what you want, yet I can smoothen out your life and heal you in unexpected ways. Just do it for 30 days.</p>
+                            <p>My Mantra takes less than 2 mins a day to do. It is always given for FREE. While I will not
+                                give you what you want, yet I can smoothen out your life and heal you in unexpected ways.
+                                Just do it for 30 days.</p>
                             <a href="mantra/gods_mantra.php" class="btn btn-primary">Click Here To Receive My Mantra</a>
                         </div>
 
                         <!-- Subcontent 3 -->
                         <div class="info-box">
                             <h4>God’s Healing</h4>
-                            <p>Talk to the above Photo about your suffering, pain, problems, issues, negativity, confusion, disease, neurosis, challenges, fear, etc. You will be pleasantly surprised with whatever is delivered.</p>
-                            <a href="healing_photo/gods_healing_photo.php" class="btn btn-primary">Click to Receive God’s Healing through Photo</a>
+                            <p>Talk to the above Photo about your suffering, pain, problems, issues, negativity, confusion,
+                                disease, neurosis, challenges, fear, etc. You will be pleasantly surprised with whatever is
+                                delivered.</p>
+                            <a href="healing_photo/gods_healing_photo.php" class="btn btn-primary">Click to Receive God’s
+                                Healing through Photo</a>
                         </div>
                     </div>
                 </div>
@@ -69,4 +81,3 @@
         </div>
 
 @endsection
-

@@ -8,14 +8,13 @@
             <div class="col-lg-7 col-md-8 col-sm-12 text-left">
                 <div class="mt-3 text-content">
 
-                    <h3 class="index-font text-left mb-5" style="font-weight: normal">Because of the Will of God, we have
-                        stopped giving God’s Mantra.</h3>
+                    <h3 class="index-font text-left mb-5" style="font-weight: normal">Tell the Image in the Healing Card
+                        that I want to remain with God 24×7..</h3>
 
-                    <h3 class="index-font text-left mb-5" style="font-weight: normal">Talking with God through the Book or
-                        Healing Card is enough.</h3>
+                    <h3 class="index-font text-left mb-5" style="font-weight: normal">You don’t need the mantra any more.
+                    </h3>
 
-                    <h3 class="index-font text-left mb-5" style="font-weight: normal">Continue talking if you get relief
-                        from your suffering and pain. Otherwise discontinue.</h3>
+                    <h3 class="index-font text-left mb-5" style="font-weight: normal">You will remain connected with God.</h3>
 
                 </div>
             </div>
