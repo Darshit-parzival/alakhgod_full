@@ -15,7 +15,7 @@
         </thead>
         <tbody>
             <!-- Domestic Shipping -->
-            <tr>
+            <tr id="{{ $language }}_domesticRow">
                 <td>Printed Book - Domestic India</td>
                 <td>₹200</td>
                 <td>
@@ -30,7 +30,7 @@
                 </td>
                 <td>
                     <button class="btn btn-primary"
-                        onclick="addToCart('{{ $language }} Domestic Book', 200, '{{ $language }}_domesticQty', 5)">
+                        onclick="addToCart('{{ $language }} Domestic Book', 200, '{{ $language }}_domesticQty', 5, 'domesticBook')">
                         Add
                     </button>
                 </td>
@@ -38,7 +38,7 @@
 
             @if ($language === 'english' || $language === 'hindi')
                 <!-- International Purchase -->
-                <tr>
+                <tr id="{{ $language }}_intlRow">
                     <td>Printed Book - International Purchase</td>
                     <td id="{{ $language }}_intlPrice">₹4000</td>
                     <td>
@@ -53,13 +53,15 @@
                                 onclick="changeQuantity('{{ $language }}_intlQty', 1); updateIntlPrice('{{ $language }}')">
                                 +
                             </button>
+
                         </div>
                     </td>
                     <td>
                         <button class="btn btn-primary"
-                            onclick="addToCart('{{ $language }} International Book', 4000, '{{ $language }}_intlQty', 2)">
+                            onclick="addToCart('{{ $language }} International Book', 4000, '{{ $language }}_intlQty', 2, 'intlBook')">
                             Add
                         </button>
+
                     </td>
                 </tr>
 
@@ -73,7 +75,7 @@
                     </td>
                     <td>
                         <button class="btn btn-primary"
-                            onclick="addToCart('{{ $language }} Ebook', 200, '{{ $language }}_ebookQty', 1)">
+                            onclick="addToCart('{{ $language }} Ebook', 200, '{{ $language }}_ebookQty', 1, 'ebook')">
                             Add
                         </button>
                     </td>
@@ -170,200 +172,63 @@
     </div>
 </div>
 
-<script>
-    function updateIntlPrice(language) {
-        let qty = document.getElementById(language + "_intlQty").value;
-        let price = qty == 2 ? 4100 : 4000;
-        document.getElementById(language + "_intlPrice").innerText = "₹" + price;
-    }
-
-    function getIntlPrice(language) {
-        let qty = document.getElementById(language + "_intlQty").value;
-        return qty == 2 ? 4100 : 4000;
-    }
-
-    function changeQuantity(inputId, delta) {
-        let input = document.getElementById(inputId);
-        let newValue = parseInt(input.value) + delta;
-        if (newValue >= input.min && newValue <= input.max) {
-            input.value = newValue;
-            if (inputId.includes("intlQty")) {
-                updateIntlPrice(inputId.split("_")[0]);
-            }
-        }
-    }
-
-    // Initialize cart from localStorage
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-    function getTotalCartQuantity() {
-        return cart.reduce((sum, item) => sum + item.quantity, 0);
-    }
-
-    function addToCart(name, basePrice, quantityId, maxQuantity, type) {
-        const quantityInput = document.getElementById(quantityId);
-        let quantity = parseInt(quantityInput.value);
-
-        // Enforce global max cart limit (10 items total)
-        if (getTotalCartQuantity() + quantity > 10) {
-            alert("Cart cannot contain more than 10 items in total.");
-            return;
-        }
-
-        // Enforce specific rules for each product type
-        if (type === "ebook" && quantity > 1) {
-            alert("Only 1 eBook can be purchased.");
-            return;
-        }
-
-        if (type === "intlBook") {
-            if (quantity > 2) {
-                alert("Maximum 2 copies allowed for international orders.");
-                return;
-            }
-            basePrice = quantity === 2 ? 4100 : 4000;
-        }
-
-        if (type === "domesticBook" && quantity > 5) {
-            alert("Maximum 5 copies allowed for domestic printed books.");
-            return;
-        }
-
-        // Check if item already exists in cart
-        const existingItem = cart.find(item => item.name === name);
-
-        if (existingItem) {
-            let newTotal = existingItem.quantity + quantity;
-
-            // Ensure we do not exceed item-specific max quantity
-            if (type === "intlBook" && newTotal > 2) {
-                alert("Maximum 2 copies allowed for international books.");
-                return;
-            }
-            if (type === "domesticBook" && newTotal > 5) {
-                alert("Maximum 5 copies allowed for domestic books.");
-                return;
-            }
-            if (type === "ebook" && newTotal > 1) {
-                alert("Only 1 eBook can be purchased.");
-                return;
-            }
-
-            existingItem.quantity += quantity;
-            existingItem.total = existingItem.quantity * existingItem.price;
-        } else {
-            cart.push({
-                name: name,
-                price: basePrice,
-                quantity: quantity,
-                total: basePrice * quantity,
-                type: type
-            });
-        }
-
-        updateCartDisplay();
-        saveCartToStorage();
-        showCart();
-    }
-
-    function updateCartDisplay() {
-        const cartItems = document.getElementById('cartItems');
-        const cartCount = document.getElementById('cartCount');
-        const cartTotal = document.getElementById('cartTotal');
-
-        // Clear current items
-        cartItems.innerHTML = '';
-        let total = 0;
-
-        if (cart.length === 0) {
-            cartItems.innerHTML = '<p class="text-center text-muted">Your cart is empty</p>';
-            return;
-        }
-
-        // Add items to display
-        cart.forEach((item, index) => {
-            total += item.total;
-            const itemHTML = `
-        <div class="cart-item">
-            <div class="item-details">
-                <span class="item-name">${item.name}</span>
-                <div class="item-controls">
-                    <button class="btn btn-sm btn-secondary" onclick="updateQuantity(${index}, -1)">-</button>
-                    <span class="quantity">${item.quantity}</span>
-                    <button class="btn btn-sm btn-secondary" onclick="updateQuantity(${index}, 1)">+</button>
-                </div>
+<!-- Checkout Modal -->
+<div id="checkoutModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content p-4">
+            <div class="modal-header">
+                <h5 class="modal-title">Shipping Information</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="item-price">₹${item.total}</div>
-            <button class="btn btn-danger btn-sm" onclick="removeItem(${index})">×</button>
+            <div class="modal-body">
+                <form id="checkoutForm">
+                    <!-- Always shown -->
+                    <div class="mb-3">
+                        <input type="text" id="fullName" class="form-control" placeholder="Full Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" id="email" class="form-control" placeholder="Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="tel" id="phone" class="form-control" placeholder="Phone No." required>
+                    </div>
+
+                    <!-- Extra fields for printed items -->
+                    <div id="extraFieldsContainer">
+                        <div class="mb-3">
+                            <input type="text" id="address1" class="form-control"
+                                placeholder="Address 1 (House No, Society/Sector)" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" id="address2" class="form-control" placeholder="Address 2 (Landmark)">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" id="address3" class="form-control"
+                                placeholder="Address 3 (Area, City/Village)" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" id="pincode" class="form-control" placeholder="Pincode/Zipcode" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <select id="countrySelect" class="form-select" required>
+                                    <option value="">Select Country</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <select id="stateSelect" class="form-select" required>
+                                    <option value="">Select State</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">Submit Order</button>
+                </form>
+            </div>
         </div>
-    `;
-            cartItems.insertAdjacentHTML('beforeend', itemHTML);
-        });
+    </div>
+</div>
 
-        // Update totals
-        cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
-        cartTotal.textContent = total;
 
-        document.getElementById('mobileCartCount').textContent = cartCount.textContent;
-    }
-
-    function updateQuantity(index, change) {
-        let item = cart[index];
-        let newQuantity = item.quantity + change;
-
-        // Enforce max limits on quantity updates
-        if (item.type === "ebook" && newQuantity > 1) {
-            alert("Only 1 eBook can be purchased.");
-            return;
-        }
-        if (item.type === "intlBook" && newQuantity > 2) {
-            alert("Maximum 2 copies allowed for international books.");
-            return;
-        }
-        if (item.type === "domesticBook" && newQuantity > 5) {
-            alert("Maximum 5 copies allowed for domestic books.");
-            return;
-        }
-
-        if (newQuantity < 1) {
-            cart.splice(index, 1);
-        } else {
-            item.quantity = newQuantity;
-            item.total = item.quantity * item.price;
-        }
-
-        updateCartDisplay();
-        saveCartToStorage();
-    }
-
-    function removeItem(index) {
-        cart.splice(index, 1);
-        updateCartDisplay();
-        saveCartToStorage();
-    }
-
-    function saveCartToStorage() {
-        localStorage.setItem('cart', JSON.stringify(cart));
-    }
-
-    function toggleCart() {
-        const cartContainer = document.getElementById('cartContainer');
-        cartContainer.classList.toggle('show');
-    }
-
-    function showCart() {
-        document.getElementById('cartContainer').classList.add('show');
-    }
-
-    function checkout() {
-        if (cart.length === 0) {
-            alert('Your cart is empty!');
-            return;
-        }
-        alert('Proceeding to checkout...');
-    }
-
-    // Initialize cart on page load
-    document.addEventListener('DOMContentLoaded', updateCartDisplay);
-
-</script>
+<script src="{{ asset('assets/js/purchase_section.js') }}"></script>
