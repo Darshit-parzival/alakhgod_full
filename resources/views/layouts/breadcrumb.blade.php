@@ -6,13 +6,14 @@
         'About-Pradip-Sir/Journey-With-God' => 'Journey WITH God',
         'Gods-Mantra' => 'God’s Mantra',
         'Gods-Book/About' => 'God’s Book',
-        'Gods-Book/Order' => 'God’s Book Purchase',
+        'Gods-Book/Order' => 'Order God’s Book',
         'Gods-Book/Read' => 'Read EBook',
         'Gods-Healing-Photo' => 'God’s Healing Photo',
         'Resources/Video-Message-English' => 'Video Message - English',
         'Resources/Video-Message-Hindi' => 'Video Message - Hindi',
         'Others/Contact' => 'Contact Us',
         'Others/FAQ' => 'FAQs',
+        'Gods-Book/Order/Checkout' => 'Checkout Details',
     ];
 
     if (!array_key_exists($path, $titles)) {

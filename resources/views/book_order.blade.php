@@ -21,7 +21,6 @@
     </div>
 
     <div class="container flex-grow-1">
-        <h2 class="text-center" style="color: darkmagenta;">Order The Book "Message From God"</h2>
         <div class="text-left mb-4">
             <h3 style="color: darkmagenta;"> The Book can be ordered in 3 ways:</h3>
             <ul class="list-unstyled" style="color: darkmagenta;">
@@ -31,12 +30,12 @@
             </ul>
         </div>
         <!-- Tabs in a Single Row -->
-        <div class="d-flex justify-content-left flex-wrap">
-            <button class="tab-btn active" onclick="showSection('english')">English Book</button>
-            <button class="tab-btn" onclick="showSection('hindi')">Hindi Book</button>
-            <button class="tab-btn" onclick="showSection('telugu')">Telugu Book</button>
-            <button class="tab-btn" onclick="showSection('gujarati')">Gujarati Book</button>
-            <button class="tab-btn" onclick="showSection('marathi')">Marathi Book</button>
+        <div class="d-flex justify-content-left">
+            <button class="tab-btn active" data-lang="english" onclick="showSection('english')">English Book</button>
+            <button class="tab-btn" data-lang="hindi" onclick="showSection('hindi')">Hindi Book</button>
+            <button class="tab-btn" data-lang="telugu" onclick="showSection('telugu')">Telugu Book</button>
+            <button class="tab-btn" data-lang="gujarati" onclick="showSection('gujarati')">Gujarati Book</button>
+            <button class="tab-btn" data-lang="marathi" onclick="showSection('marathi')">Marathi Book</button>
         </div>
 
         <div class="row">
@@ -84,9 +83,15 @@
             document.getElementById(sectionId).classList.add('active');
 
             // Update active button
-            document.querySelectorAll('.tab-btn').forEach(button => {
-                button.classList.remove('active');
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.lang === sectionId) {
+                    btn.classList.add('active');
+                }
             });
+
+            // Refresh mutual exclusion after tab change
+            handleMutualExclusion();
             document.querySelector(`[onclick="showSection('${sectionId}')"]`).classList.add('active');
         }
     </script>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ErrController;
+use App\Http\Controllers\AlakhgodInterestedBuyersController;
 
 // Define all valid routes
 Route::get('/', function () {
@@ -28,6 +29,8 @@ Route::get('/Gods-Book/Order', function () {
     return view('book_order');
 });
 
+Route::post('/alakhgod/order/store', [AlakhgodInterestedBuyersController::class, 'store'])->name('alakhgod.buyers.store');
+
 Route::get('/Gods-Book/Read', function () {
     return view('book_read');
 });
@@ -52,9 +55,13 @@ Route::get('/Others/FAQ', function () {
     return view('faq');
 });
 
+Route::get('/Gods-Book/Order/Checkout', function () {
+    return view('checkout_details');
+});
+
 // Catch-all route for 404 pages (should be placed last)
 Route::fallback([ErrController::class, 'notFound']);
 
-Route::get('/admin', function () {
-    return view('admin.index');
-});
+// Route::get('/admin', function () {
+//     return view('admin.index');
+// });

@@ -1,0 +1,25 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+  }
+  .sidebar {
+    min-height: 100vh;
+    background-color: #343a40;
+    color: white;
+  }
+  .sidebar a {
+    color: #adb5bd;
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+  }
+  .sidebar a:hover {
+    background-color: #495057;
+    color: white;
+  }
+  .sidebar .active {
+    background-color: #495057;
+    color: white;
+  }
+  .content {
+    padding: 20px;
+  }

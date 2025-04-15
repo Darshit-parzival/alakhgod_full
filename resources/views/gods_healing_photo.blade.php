@@ -48,12 +48,9 @@
 
                     <!-- Video Section -->
                     <div class="container text-center mb-4">
-                        <video style="max-width: 800px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"
-                            id="healing-photo" playsinline controls>
-                            <source
-                                src="{{ asset('assets/vid/healing_photo/Inviting_Humans_To_Use_Gods_Healing_Cards.mp4') }}"
-                                type="video/mp4" />
-                        </video>
+
+                        <iframe style="max-width: 800px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" width="100%" height="200" src="https://www.youtube.com/embed/l1pbKzoBk6s?si=z-u--ucrgPAA7fY9" title="Video 1"
+                                frameborder="0" allowfullscreen></iframe>
                     </div>
 
                     <div class="container mt-4">
@@ -357,27 +354,5 @@
         </div>
     </div>
 
-    <script>
-        const player = new Plyr('#healing-photo', {
-            controls: [
-                'play', 'progress', 'duration', 'mute', 'volume',
-                'fullscreen'
-            ],
-            autoplay: false,
-            keyboard: { focused: true, global: true },
-            seekTime: 5
-        });
-
-        // Remove the 'canplay' duration override (caused seeking issues)
-        // Remove the 'seeking' event handler (unnecessary interference)
-
-        // Security measures (keep these)
-        document.getElementById('healing-photo').addEventListener('contextmenu', event => event.preventDefault());
-        document.addEventListener('keydown', event => {
-            if (event.ctrlKey && ['s', 'S', 'u', 'U', 'p', 'P'].includes(event.key)) {
-                event.preventDefault();
-            }
-        });
-    </script>
 
 @endsection

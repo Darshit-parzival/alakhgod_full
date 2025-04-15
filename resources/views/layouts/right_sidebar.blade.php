@@ -7,11 +7,11 @@
     title="YouTube video player" frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<div class="video-container" style="width: 300px; height: 200px">
+{{-- <div class="video-container" style="width: 300px; height: 200px">
     <video id="player" playsinline controls>
         <source src="{{ asset('assets/vid/sidebar/3_Simple_Ways For_Connecting_With_God.mp4') }}" type="video/mp4" />
     </video>
-</div>
+</div> --}}
 
 <style>
     /* Add CSS to maintain aspect ratio and proper sizing */
@@ -34,10 +34,10 @@
 </style>
 
 <!-- Join Us Heading -->
-<h4 class="mt-5">Join on</h4>
+{{-- <h4 class="mt-5">Join on</h4> --}}
 
 <!-- Social Icons -->
-<div class="d-flex flex-wrap justify-content-center mt-2 mb-2" style="max-width: 200px;">
+{{-- <div class="d-flex flex-wrap justify-content-center mt-2 mb-2" style="max-width: 200px;">
     <div class="d-flex justify-content-center w-100 gap-5">
         <a href="https://www.facebook.com/AlakhGod" target="_blank"><img src="{{asset('assets/img/Facebook.png')}}"
                 alt="Facebook" width="40"></a>
@@ -58,13 +58,13 @@
         <a href="https://alakhgod.medium.com/" target="_blank"><img src="{{asset('assets/img/Medium.png')}}"
                 alt="Medium" width="40"></a>
     </div>
-</div>
+</div> --}}
 <a href="https://www.linkedin.com/newsletters/7272962487929446401/?displayConfirmation=true" target="_blank"
     class="btn btn-primary mt-5">Subscribe to Newsletter<br />Message From God</a>
 <script>
     const player = new Plyr('#player', {
         controls: [
-            'play', 'progress',  'duration', 'mute', 'volume', 
+            'play', 'progress',  'duration', 'mute', 'volume',
              'fullscreen'
         ],
         autoplay: false,

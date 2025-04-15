@@ -1,6 +1,18 @@
 @extends('layouts.main')
 
 @section('main-section')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.8/pdfobject.min.js"></script>
+
+    <!-- PDF Viewer Modal -->
+    <div id="pdfModal"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000;">
+        <div style="background: white; margin: 2em auto; padding: 20px; width: 80%; height: 90%;">
+            <button onclick="closePdfModal()"
+                style="float: right; padding: 5px 10px; background: #d14bd8; color: white; border: none; cursor: pointer;">Close</button>
+            <div id="pdfViewer" style="width: 100%; height: 95%; margin-top: 10px;"></div>
+        </div>
+    </div>
+
     <div class="container flex-grow-1 d-flex flex-column justify-content-start align-items-left mt-5">
         <div class="row justify-content-center">
             <!-- Left Section (Main Content) -->
@@ -10,13 +22,13 @@
 
                         <!-- Video 1 -->
                         <div class="video-container" style="flex: 1; min-width: 300px; margin: 10px;">
-                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_1" title="Video 1"
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/kVnLeDOBlHc?si=D03igwGBY0IJy1F-" title="Video 1"
                                 frameborder="0" allowfullscreen></iframe>
                         </div>
 
                         <!-- Video 2 -->
                         <div class="video-container" style="flex: 1; min-width: 300px; margin: 10px;">
-                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_2" title="Video 2"
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/_pSCzugigJk?si=lG1-FVfhtd-xojhV" title="Video 2"
                                 frameborder="0" allowfullscreen></iframe>
                         </div>
 
@@ -100,24 +112,39 @@
                             <table class="table table-bordered text-left" style="border-color: #d14bd8;">
                                 <tbody>
                                     <tr style="background: #ffffff;">
-                                        <td class="p-3" style="color: #d14bd8; font-weight: bold;">English Book – Message
-                                            From GOD</td>
+                                        <td class="p-3"><a class="text-decoration-none"
+                                                style="color: #d14bd8; font-weight: bold;"
+                                                href="{{ asset('assets/pdf/MOG_Free_Chapters_English.pdf') }}"
+                                                onclick="openPdf(event, this.href)"> English Book
+                                                – Message From GOD</a></td>
                                     </tr>
                                     <tr style="background: #f1f1f1;">
-                                        <td class="p-3" style="color: #d14bd8; font-weight: bold;">Hindi Book – परमात्मा का
-                                            संदेश</td>
+                                        <td class="p-3"><a class="text-decoration-none"
+                                                href="{{ asset('assets/pdf/MOG_Free_Chapters_Hindi.pdf') }}"
+                                                style="color: #d14bd8; font-weight: bold;"
+                                                onclick="openPdf(event, this.href)">Hindi Book – परमात्मा का
+                                                संदेश</a></td>
                                     </tr>
                                     <tr style="background: #ffffff;">
-                                        <td class="p-3" style="color: #d14bd8; font-weight: bold;">Telugu Book – పరమాత్ముని
-                                            సందేశము</td>
+                                        <td class="p-3"><a class="text-decoration-none"
+                                                href="{{ asset('assets/pdf/MOG_Free_Chapters_Telugu.pdf') }}"
+                                                style="color: #d14bd8; font-weight: bold;"
+                                                onclick="openPdf(event, this.href)">Telugu Book – పరమాత్ముని
+                                                సందేశము</a></td>
                                     </tr>
                                     <tr style="background: #f1f1f1;">
-                                        <td class="p-3" style="color: #d14bd8; font-weight: bold;">Gujarati Book –
-                                            પરમાત્માનો સંદેશ</td>
+                                        <td class="p-3"><a class="text-decoration-none"
+                                                href="{{ asset('assets/pdf/MOG_Free_Chapters_Gujarati.pdf') }}"
+                                                style="color: #d14bd8; font-weight: bold;"
+                                                onclick="openPdf(event, this.href)"> Gujarati Book –
+                                                પરમાત્માનો સંદેશ</a></td>
                                     </tr>
                                     <tr style="background: #ffffff;">
-                                        <td class="p-3" style="color: #d14bd8; font-weight: bold;">Marathi Book –
-                                            परमात्म्याचा संदेश</td>
+                                        <td class="p-3"><a class="text-decoration-none"
+                                                href="{{ asset('assets/pdf/MOG_Free_Chapters_Marathi.pdf') }}"
+                                                style="color: #d14bd8; font-weight: bold;"
+                                                onclick="openPdf(event, this.href)">Marathi Book –
+                                                परमात्म्याचा संदेश</a></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -125,15 +152,10 @@
                     </div>
 
                     <div class="d-flex flex-column align-items-start mt-4">
-                        <a href="https://www.linkedin.com/newsletters/7272962487929446401/?displayConfirmation=true"
-                            target="_blank" class="btn btn-primary mt-2">
-                            Click To Order eBook (English)
+                        <a href="/Gods-Book/Order" target="_blank" class="btn btn-primary mt-2">
+                            Click To Order Books
                         </a>
 
-                        <a href="https://www.linkedin.com/newsletters/7272962487929446401/?displayConfirmation=true"
-                            target="_blank" class="btn btn-primary mt-2">
-                            Click To Order PRINT Books (Available in English, Gujarati, Hindi, Telugu and Marathi)
-                        </a>
                     </div>
 
                 </div>
@@ -144,5 +166,36 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function openPdf(event, url) {
+            event.preventDefault();
+            const modal = document.getElementById('pdfModal');
+            const viewer = document.getElementById('pdfViewer');
+
+            // Clear previous PDF
+            viewer.innerHTML = '';
+
+            // Embed new PDF
+            PDFObject.embed(url, viewer, {
+                fallbackLink: `<p>Your browser does not support inline PDFs. Please <a href="${url}">download the PDF</a> to view it.</p>`
+            });
+
+            // Show modal
+            modal.style.display = 'block';
+        }
+
+        function closePdfModal() {
+            document.getElementById('pdfModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function (event) {
+            const modal = document.getElementById('pdfModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
 
 @endsection

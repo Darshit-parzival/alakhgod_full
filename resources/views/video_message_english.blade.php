@@ -10,39 +10,39 @@
             <!-- Video Links -->
             <ul class="list-unstyled mt-3">
                 <li class="mb-2">
-                    <a href="path/to/part1" style="color: #d14bd8; font-size: 18px; text-decoration: none;">Part 1: Message
+                    <a href="#part1" style="color: #d14bd8; font-size: 18px; text-decoration: none;">Part 1: Message
                         From The Human Who Spoke To God</a>
                 </li>
                 <li class="mb-2">
-                    <a href="path/to/part2" style="color: #d14bd8; font-size: 18px; text-decoration: none;">Part 2: About
+                    <a href="#part2" style="color: #d14bd8; font-size: 18px; text-decoration: none;">Part 2: About
                         The King</a>
                 </li>
                 <li class="mb-2">
-                    <a href="path/to/part3" style="color: #d14bd8; font-size: 18px; text-decoration: none;">Part 3: Who Am
+                    <a href="#part3" style="color: #d14bd8; font-size: 18px; text-decoration: none;">Part 3: Who Am
                         I?</a>
                 </li>
                 <li class="mb-2">
-                    <a href="path/to/part4" style="color: #d14bd8; font-size: 18px; text-decoration: none;">Part 4:
+                    <a href="#part4" style="color: #d14bd8; font-size: 18px; text-decoration: none;">Part 4:
                         Faith</a>
                 </li>
                 <li class="mb-2">
-                    <a href="path/to/part5" style="color: #d14bd8; font-size: 18px; text-decoration: none;">Part 5: Self
+                    <a href="#part5" style="color: #d14bd8; font-size: 18px; text-decoration: none;">Part 5: Self
                         Realisation</a>
                 </li>
                 <li class="mb-2">
-                    <a href="path/to/part6" style="color: #d14bd8; font-size: 18px; text-decoration: none;">Part 6:
+                    <a href="#part6" style="color: #d14bd8; font-size: 18px; text-decoration: none;">Part 6:
                         Exclusive Interview</a>
                 </li>
                 <li class="mb-2">
-                    <a href="path/to/part7" style="color: #d14bd8; font-size: 18px; text-decoration: none;">Part 7:
+                    <a href="#part7" style="color: #d14bd8; font-size: 18px; text-decoration: none;">Part 7:
                         Answering Book Readers Questions</a>
                 </li>
                 <li class="mb-2">
-                    <a href="path/to/part8" style="color: #d14bd8; font-size: 18px; text-decoration: none;">Part 8: Pradip
+                    <a href="#part8" style="color: #d14bd8; font-size: 18px; text-decoration: none;">Part 8: Pradip
                         Sir’s speaking to Gen-Z Kid</a>
                 </li>
                 <li class="mb-2">
-                    <a href="path/to/part9" style="color: #d14bd8; font-size: 18px; text-decoration: none;">Part 9: God
+                    <a href="#part9" style="color: #d14bd8; font-size: 18px; text-decoration: none;">Part 9: God
                         Wants You To Relax by Falguni ji and Pradip Sir with Priyadarshini School – Pune</a>
                 </li>
             </ul>
@@ -56,13 +56,17 @@
                 <div class="d-flex flex-row justify-content-between align-items-start mt-4">
                     <!-- Left Side: Video -->
                     <div class="col-md-6" style="padding-left: 40px; margin-right: 30px;">
-                        <video width="100%" id="player" playsinline controls>
-                            <source
-                                src="{{ asset('assets/vid/video_message_english/Part1_Message_From_The_Human_Who_Spoke_To_God.mp4') }}"
-                                type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <iframe
+                            width="100%"
+                            height="315"
+                            src="https://www.youtube.com/embed/jwaFfuVfLDQ?si=1Qv9KrMp3JroVUeh"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
                     </div>
+
 
                     <!-- Right Side: Description -->
                     <div class="col-md-6" style="padding-right: 40px;">
@@ -97,11 +101,15 @@
                 <div class="d-flex flex-row justify-content-between align-items-start mt-4">
                     <!-- Left Side: Video -->
                     <div class="col-md-6" style="padding-left: 40px; margin-right: 30px;">
-                        <video width="100%" id="player" playsinline controls>
-                            <source src="{{ asset('assets/vid/video_message_english/Part2_About_The_King.mp4') }}"
-                                type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <iframe
+                            width="100%"
+                            height="315"
+                            src="https://www.youtube.com/embed/Wojp8-EuMnY?si=AzoLtJ2neEh4TMtM"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
                     </div>
 
                     <!-- Right Side: Description -->
@@ -127,12 +135,17 @@
                 <div class="d-flex flex-row justify-content-between align-items-start mt-4">
                     <!-- Left Side: Video -->
                     <div class="col-md-6" style="padding-left: 40px; margin-right: 30px;">
-                        <video width="100%" id="player" playsinline controls>
-                            <source src="{{ asset('assets/vid/video_message_english/Part3_Who_Am_I.mp4') }}"
-                                type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <iframe
+                            width="100%"
+                            height="315"
+                            src="https://www.youtube.com/embed/Hijt-c90PJk?si=KshEUvmm7SWItu1X"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
                     </div>
+
 
                     <!-- Right Side: Description -->
                     <div class="col-md-6" style="padding-right: 40px;">
@@ -159,12 +172,17 @@
                 <div class="d-flex flex-row justify-content-between align-items-start mt-4">
                     <!-- Left Side: Video -->
                     <div class="col-md-6" style="padding-left: 40px; margin-right: 30px;">
-                        <video width="100%" id="player" playsinline controls>
-                            <source src="{{ asset('assets/vid/video_message_english/Part4_Faith.mp4') }}"
-                                type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <iframe
+                            width="100%"
+                            height="315"
+                            src="https://www.youtube.com/embed/izGbhz932bU?si=XaC5tTEwcydUf8pV"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
                     </div>
+
 
                     <!-- Right Side: Description -->
                     <div class="col-md-6" style="padding-right: 40px;">
@@ -178,6 +196,164 @@
                             Only a few prayers are fulfilled to keep the deception of faith alive. True God needs no faith,
                             surrender, devotion and yet delivers healing that is gentle, quick and unexpected. The Human who
                             brought the Message of God to the Humans.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- part 5 -->
+            <div class="container flex-grow-1 d-flex flex-column justify-content-start align-items-center mt-5" id="part5">
+                <!-- Centered Heading -->
+                <h3 class="index-font text-center" style="color: #d14bd8; font-weight: bold;">Part 5: Self Realisation</h3>
+
+                <div class="d-flex flex-row justify-content-between align-items-start mt-4">
+                    <!-- Left Side: Video -->
+                    <div class="col-md-6" style="padding-left: 40px; margin-right: 30px;">
+                        <iframe
+                            width="100%"
+                            height="315"
+                            src="https://www.youtube.com/embed/KUQpqaCMEG4?si=lpBM91VKdMswvkND"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+
+                    <!-- Right Side: Description -->
+                    <div class="col-md-6" style="padding-right: 40px;">
+                        <p class="has-medium-font-size index-font"
+                            style="font-size: 18px; color: #333; line-height: 1.8; margin-left: 10px;">
+                            In this video Pradip Sir explains in a gentle and simple manner what the discovery of ‘who am I’ points to and how it is not true freedom.<br>
+                            When you Choose God you no longer need Self Realization and Spiritual Awakening.<br>
+                            Self Realization or spiritual awakening is the third deception created by the king.<br>
+                            Guru and narrative that one is an unmoving awareness is false.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- part 6 -->
+            <div class="container flex-grow-1 d-flex flex-column justify-content-start align-items-center mt-5" id="part6">
+                <!-- Centered Heading -->
+                <h3 class="index-font text-center" style="color: #d14bd8; font-weight: bold;">Part 6: Exclusive Interview</h3>
+
+                <div class="d-flex flex-row justify-content-between align-items-start mt-4">
+                    <!-- Left Side: Video -->
+                    <div class="col-md-6" style="padding-left: 40px; margin-right: 30px;">
+                        <iframe
+                            width="100%"
+                            height="315"
+                            src="https://www.youtube.com/embed/CS5YIcNoU6A?si=wsns6lPjUZNfUe2D"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- part 7 -->
+            <div class="container flex-grow-1 d-flex flex-column justify-content-start align-items-center mt-5" id="part7">
+                <!-- Centered Heading -->
+                <h3 class="index-font text-center" style="color: #d14bd8; font-weight: bold;">Part 7: Answering Book Readers Questions</h3>
+
+                <div class="d-flex flex-row justify-content-between align-items-start mt-4">
+                    <!-- Left Side: Video -->
+                    <div class="col-md-6" style="padding-left: 40px; margin-right: 30px;">
+                        <iframe
+                            width="100%"
+                            height="315"
+                            src="https://www.youtube.com/embed/Yw0_uNMgD-o?si=9COv8_Bo2_6PQOP_"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <!-- Right Side: Description -->
+                    <div class="col-md-6" style="padding-right: 40px;">
+                        <p class="has-medium-font-size index-font"
+                            style="font-size: 18px; color: #333; line-height: 1.8; margin-left: 10px;">
+                            In this meeting Pradip Sir meets readers of His Book, Message From God, via Zoom and answers their varied questions bringing them closer to God.<br>
+                            These questions range from Karma to how to take God’s support in various life situation.<br>
+                            As you watch or listen to this video, you will be in the live presence of Alive God and Goddess through Pradip Mukherji, Messenger of God and Falguni Pathak, Sourcing Goddess’ Energy. Allow them to Grace You, Heal You and Soothe You!<br>
+                            God is asking humans to experiment with God for 30 days by sharing their suffering, pain, fear, anxieties, worries, and everything that bothers them with the Photo imprint of God, God’s Healing Cards or the Book.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- part 8 -->
+            <div class="container flex-grow-1 d-flex flex-column justify-content-start align-items-center mt-5" id="part8">
+                <!-- Centered Heading -->
+                <h3 class="index-font text-center" style="color: #d14bd8; font-weight: bold;">Part 7: Answering Book Readers Questions</h3>
+
+                <div class="d-flex flex-row justify-content-between align-items-start mt-4">
+                    <!-- Left Side: Video -->
+                    <div class="col-md-6" style="padding-left: 40px; margin-right: 30px;">
+                        <iframe
+                            width="100%"
+                            height="315"
+                            src="https://www.youtube.com/embed/n6Lf_qUQVVM?si=jqzrYN-v9ymhUn6k"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <!-- Right Side: Description -->
+                    <div class="col-md-6" style="padding-right: 40px;">
+                        {{-- <p class="has-medium-font-size index-font"
+                            style="font-size: 18px; color: #333; line-height: 1.8; margin-left: 10px;">
+                            In this meeting Pradip Sir meets readers of His Book, Message From God, via Zoom and answers their varied questions bringing them closer to God.<br>
+                            These questions range from Karma to how to take God’s support in various life situation.<br>
+                            As you watch or listen to this video, you will be in the live presence of Alive God and Goddess through Pradip Mukherji, Messenger of God and Falguni Pathak, Sourcing Goddess’ Energy. Allow them to Grace You, Heal You and Soothe You!<br>
+                            God is asking humans to experiment with God for 30 days by sharing their suffering, pain, fear, anxieties, worries, and everything that bothers them with the Photo imprint of God, God’s Healing Cards or the Book.
+                        </p> --}}
+                    </div>
+                </div>
+            </div>
+
+            <!-- part 9 -->
+            <div class="container flex-grow-1 d-flex flex-column justify-content-start align-items-center mt-5" id="part9">
+                <!-- Centered Heading -->
+                <h3 class="index-font text-center" style="color: #d14bd8; font-weight: bold;">Part 9: God Wants You To Relax by Falguni ji and Pradip Sir with Priyadarshini School – Pune</h3>
+
+                <div class="d-flex flex-row justify-content-between align-items-start mt-4">
+                    <!-- Left Side: Video -->
+                    <div class="col-md-6" style="padding-left: 40px; margin-right: 30px;">
+                        <iframe
+                            width="100%"
+                            height="315"
+                            src="https://www.youtube.com/embed/n6Lf_qUQVVM?si=jqzrYN-v9ymhUn6k"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <!-- Right Side: Description -->
+                    <div class="col-md-6" style="padding-right: 40px;">
+                        <p class="has-medium-font-size index-font"
+                            style="font-size: 18px; color: #333; line-height: 1.8; margin-left: 10px;">
+                            In the presence of Falguni ji Pathak, Pradip ji Mukherji answered various questions put forth by students and faculty at Priyadarshini School, Pune on 10th Sept 2024:<br>
+                            ~ 3 worlds that we live in.<br>
+                            ~ 5 things humans are made of.!<br>
+                            ~ who is the king of the universe?<br>
+                            ~ 3 ways to Connect with Supreme God.<br>
+                            ~ Why false god wants to keep humans in their pain and suffering?<br>
+                            ~ Definition of hell is burnt by an inner fire of negativity.<br>
+                            ~ God wants you to relax.<br>
+                            ~ Who is opposing the Supreme God?<br>
+                            ~ What gives meaning to life?<br>
+                            ~ How did Pradip Sir become Supreme God.
                         </p>
                     </div>
                 </div>

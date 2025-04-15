@@ -1,35 +1,34 @@
 <hr class="my-3">
 <footer class="bg-white foot-font pt-4 border-top">
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-between">
 
             <!-- About Section -->
-            <div class="col-lg-4 col-md-6 mb-4">
+            {{-- <div class="col-lg-4 col-md-6 mb-4">
                 <h5>About Alakh God</h5>
                 <p>
                     Alakh God is dedicated to guiding souls towards spiritual healing, peace, and self-discovery.
                     We share divine messages, provide spiritual insights, and offer support for your spiritual journey.
                 </p>
-            </div>
+            </div> --}}
 
             <!-- Quick Links Section -->
             <div class="col-lg-2 col-md-6 mb-4">
                 <h5>Quick Links</h5>
                 <ul class="list-unstyled">
-                    <li><a href="index.php" class="foot-font text-decoration-none">Home</a></li>
                     <li><a href="faq.php" class="foot-font text-decoration-none">FAQs</a></li>
+                    <li><a href="index.php" class="foot-font text-decoration-none">Home</a></li>
                     <li><a href="contact.php" class="foot-font text-decoration-none">Contact Us</a></li>
-                    <li><a href="privacy-policy.php" class="foot-font text-decoration-none">Privacy Policy</a></li>
-                    <li><a href="terms-of-service.php" class="foot-font text-decoration-none">Terms of Service</a></li>
+                    <li><a href="contact.php" class="foot-font text-decoration-none">Order Book</a></li>
+                    <li><a href="contact.php" class="foot-font text-decoration-none">God's Healing Photo</a></li>
+
                 </ul>
             </div>
 
             <!-- Contact Information -->
             <div class="col-lg-3 col-md-6 mb-4">
                 <h5>Contact Info</h5>
-                <p><i class="bi bi-geo-alt-fill me-2"></i> 123 Spiritual Lane, Serenity City, Earth</p>
-                <p><i class="bi bi-envelope-fill me-2"></i> contact@alakhgod.com</p>
-                <p><i class="bi bi-telephone-fill me-2"></i> +1 (123) 456-7890</p>
+                <p><i class="bi bi-envelope-fill me-2"></i>alakhgod@gmail.com</p>
             </div>
 
             <!-- Social Media Links -->
